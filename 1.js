@@ -37,6 +37,7 @@ function newGame() {
     lifes = 3;
     for (img of document.getElementsByTagName('img')){
         img.src =  './img/heart.png';
+        img.classList.remove('balanceo');
     }
     h3 = document.getElementsByTagName('h3')[0];
     h3.innerHTML = '';
