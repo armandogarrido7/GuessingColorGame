@@ -55,5 +55,24 @@ body {
       font-size: 30px;
       }
   img{
+    position: relative;
       width:64px;
   }
+  .balanceo{
+    animation-name: balanceo;
+    animation-duration: .2s;
+  }
+  @keyframes balanceo {
+    0%{right: 10px}
+    25%{right: -10px}
+    50%{right: 10px}
+    75%{right: -10px}
+    100%{right: 10px;}
+  }
+  /* @keyframes balanceo {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  } */

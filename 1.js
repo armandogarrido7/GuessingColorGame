@@ -12,12 +12,16 @@ function checkColor(e) {
     } else {
         lifes--;
         imgs = document.getElementsByTagName('img');
-        if (lifes == 2)
+        if (lifes == 2){
             imgs[0].src = './img/heart_dead.png';
-        else if (lifes== 1)
+            imgs[0].classList.add('balanceo');
+        } else if (lifes== 1){
             imgs[1].src = './img/heart_dead.png';
+            imgs[1].classList.add('balanceo');
+        }
         else{
             imgs[2].src = './img/heart_dead.png';
+            imgs[2].classList.add('balanceo');
             h3 = document.getElementsByTagName('h3')[0]
             h3.style.color = 'red';
             h3.innerHTML = 'Has Perdido :(';
