@@ -26,8 +26,14 @@ function checkColor(e) {
             h3.style.color = 'red';
             h3.innerHTML = 'Has Perdido :(';
             for (div of document.getElementsByTagName('div')) {
+                div.classList.add('desaparecer');
+                setTimeout(() => {
+                    for (div of document.getElementsByTagName('div')) {
+                        if (div.style.backgroundColor != ('rgb' + my_colour))
+                div.style.backgroundColor = 'black';}}, 1700)
                 div.removeEventListener('click', checkColor)
             }
+
         } 
     }
 
@@ -48,6 +54,7 @@ function newGame() {
     num = Math.floor(Math.random() * divs.length)
     divs[num].style.backgroundColor = "rgb" + my_colour;
     for (div of divs) {
+        div.classList.remove('desaparecer');
         div.addEventListener('click', checkColor)
         if (div.style.backgroundColor != ('rgb' + my_colour)) {
             div.style.backgroundColor = "rgb" + generateColor();
